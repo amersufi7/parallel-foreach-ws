@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="parallel-foreach-wsFlow" doc:id="04d84df9-f0c7-4461-8682-9b3d5353c5f6" >
 		<http:listener doc:name="Listener" doc:id="26a4a813-105b-4fc5-a396-c19768134ee7" config-ref="HTTP_Listener_config" path="/foreach"/>
 		<parallel-foreach doc:name="Parallel For Each" doc:id="be707d9a-0a5e-43f2-a881-965184bc2cbf" >
-			<set-variable value="#[payload]" doc:name="Var" doc:id="321f65c5-ef12-495e-818c-744ea6d79d00" variableName='Var'/>
+			<set-variable value="#[payload]" doc:name="Vars" doc:id="321f65c5-ef12-495e-818c-744ea6d79d00" variableName='Var'/>
 		</parallel-foreach>
 		<logger level="INFO" doc:name="Payload" doc:id="1d019bac-caf9-42c7-a368-5fa0b33a89c9" message="#[payload]"/>
 	</flow>
